@@ -1,6 +1,6 @@
 document.addEventListener('click',e=>{
  const t=e.target.closest('button');if(!t)return;
- if(t.dataset.o){const id=t.dataset.o;id==='door'?doorSheet():sheet(id);return}
+  if(t.dataset.o){goTo(t.dataset.o);return}
  if(t.id==='nb'){notebook();return}
  if('c' in t.dataset){close();return}
  if('r' in t.dataset){location.reload();return}
