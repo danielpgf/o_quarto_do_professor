@@ -9,7 +9,7 @@ function show(n,p,live){
 function room(){
  const nd=P.filter(p=>st[p.id].done).length;$('cnt').textContent=nd;
  $('room').innerHTML=P.map(p=>`<button class="ob ${st[p.id].done?'d':''}" data-o="${p.id}" style="left:${p.x}%;top:${p.y}%">${p.ico}<small>${p.nm}</small></button>`).join('')+
- `<button class="ob ${nd===4?'pulse':''}" data-o="door" style="left:50%;top:44%;font-size:72px">🚪<small>${nd===4?'Porta (tente o código)':'Porta trancada'}</small></button>`}
+ `<button class="ob ${nd===4?'pulse':''}" data-o="door" style="left:50%;top:44%;font-size:72px">🚪<small>${nd===4?'Porta (tente o código)':'Porta trancada'}</small></button>`+'<span id="pl">🕵️</span>';upd()}
 function open(h){$('box').innerHTML=h;$('sh').style.display='flex'}
 function close(){$('sh').style.display='none'}
 function sheet(id){
